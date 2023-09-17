@@ -103,7 +103,53 @@ body {
   border: 0.2rem solid dodgerblue;
 }
 
-.btn__item:hover {
+.control__btn:hover .btn__item {
   background-color: white;
   border-color: white;
 }
+
+/* actions */
+
+#switch1:checked ~ .wrapper label:nth-child(1) .btn__item,
+#switch2:checked ~ .wrapper label:nth-child(2) .btn__item,
+#switch3:checked ~ .wrapper label:nth-child(3) .btn__item,
+#switch4:checked ~ .wrapper label:nth-child(4) .btn__item {
+  background-color: transparent;
+}
+
+/* main slider */
+
+#switch1:checked ~ .slider .slider__line {
+  margin-left: 0;
+}
+
+#switch2:checked ~ .slider .slider__line {
+  margin-left: -100%;
+}
+
+#switch3:checked ~ .slider .slider__line {
+  margin-left: -200%;
+}
+
+#switch4:checked ~ .slider .slider__line {
+  margin-left: -300%;
+}
+
+/* text slider */
+
+#switch1:checked ~ .wrapper .text__line {
+  margin-left: 0;
+}
+
+#switch2:checked ~ .wrapper .text__line {
+  margin-left: -100%;
+}
+
+#switch3:checked ~ .wrapper .text__line {
+  margin-left: -200%;
+}
+
+#switch4:checked ~ .wrapper .text__line {
+  margin-left: -300%;
+}
+
