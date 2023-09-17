@@ -58,7 +58,7 @@ body {
 }
 
 .slider__text {
-  width: 50%;
+  width: 42rem;
   overflow: hidden;
 }
 
@@ -68,6 +68,7 @@ body {
 
   font-size: 1.5rem;
   color: white;
+
 }
 
 .text__item {
@@ -106,6 +107,11 @@ body {
 .control__btn:hover .btn__item {
   background-color: white;
   border-color: white;
+}
+
+.control__btn:active .btn__item {
+  background-color: transparent;
+  border-color: chocolate;
 }
 
 /* actions */
@@ -151,5 +157,25 @@ body {
 
 #switch4:checked ~ .wrapper .text__line {
   margin-left: -300%;
+}
+
+/* animation */
+
+.slider__line,
+.text__line,
+.btn__item {
+  transition: 0.2s linear;
+}
+
+@media (max-width: 689px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .slider__text {
+    width: 100%;
+  }
 }
 
